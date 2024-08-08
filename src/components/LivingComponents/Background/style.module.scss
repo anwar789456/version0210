@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+
+.container {
+    height: auto;
+    width: calc(100vw - 310px);
+    position: relative;
+    margin-left: 310px;
+    padding-top: 10vh;
+    background-color: #f3f2ec;
+    .background_container{
+        background-color: #f3f2ec;
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 1090px){
+    .container {
+        width: calc(100vw);
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,54 @@
+.productPage {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.imageGallery {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: block;
+    width: 10%;
+  }
+}
+
+.mainImage {
+  width: 80%;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.imageCarousel {
+  display: block;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+.productDetails {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+
+  @media (min-width: 768px) {
+    width: 30%;
+    text-align: left;
+    position: sticky;
+    top: 0;
+  }
+}

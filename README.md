@@ -34,3 +34,8 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+/*
+  @headlessui/react @radix-ui/react-icons @radix-ui/react-slider axios bootstrap class-variance-authority clsx cors dotenv eslint eslint-config-next express framer-motion gsap locomotive-scroll mongodb mongoose nodemon react-bootstrap react-icons react-responsive-carousel react-slick sass slick-carousel tailwind-merge tailwindcss-animate tw-elements
+*/
