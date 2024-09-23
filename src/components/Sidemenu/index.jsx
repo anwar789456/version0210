@@ -2,21 +2,20 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './style.module.scss';
 import MultiRangeSlider from '../SliderRange/MultiRangeSlider';
-import { FaSearch, FaTimes } from 'react-icons/fa';
-
 const iconAnimation = {
   initial: { opacity: 0, scale: 0.5, rotate: 0 },
   animate: { opacity: 1, scale: 1, rotate: 360 },
   exit: { opacity: 0, scale: 0.5, rotate: 0 },
-  transition: { duration: 0.3 }
 };
-
 export default function SideNavbar() {
   const [selected, setSelected] = useState(null);
   const [sortingSelected, setSortingSelected] = useState(null);
   const [ascDescSelected, setAscDescSelected] = useState(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
+  const handleSearch = (event) => {
+    const query = event.target.value.toLowerCase();
+    // Implement your search logic here
+  };
   const handleRadioChange = (value, group) => {
     if (group === 'availability') {
       setSelected(selected === value ? null : value);
@@ -26,14 +25,12 @@ export default function SideNavbar() {
       setAscDescSelected(ascDescSelected === value ? null : value);
     }
   };
-
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
-
   return (
     <>
-      <div className={styles.navbar}>
+      <div className={styles.filterBar}>
         <button className={styles.toggleButton} onClick={toggleSidebar}>
           <AnimatePresence mode="wait">
             <motion.div
@@ -43,11 +40,30 @@ export default function SideNavbar() {
               exit="exit"
               variants={iconAnimation}
             >
-              {isSidebarOpen ? <FaTimes className={styles.icon} /> : <FaSearch className={styles.icon} />}
+              {isSidebarOpen ? 
+              <svg xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24" width={30} height={30} fill={"none"}>
+                  <path d="M19.0005 4.99988L5.00049 18.9999M5.00049 4.99988L19.0005 18.9999" 
+                    stroke="currentColor" strokeWidth=".5" strokeLinecap="round" 
+                    strokeLinejoin="round" />
+              </svg> 
+              
+              : 
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={20} height={20} color={"#000000"} fill={"none"}>
+                <path d="M3 7H6" stroke="currentColor" strokeWidth=".5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M3 17H9" stroke="currentColor" strokeWidth=".5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M18 17L21 17" stroke="currentColor" strokeWidth=".5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M15 7L21 7" stroke="currentColor" strokeWidth=".5" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M6 7C6 6.06812 6 5.60218 6.15224 5.23463C6.35523 4.74458 6.74458 4.35523 7.23463 4.15224C7.60218 4 8.06812 4 9 4C9.93188 4 10.3978 4 10.7654 4.15224C11.2554 4.35523 11.6448 4.74458 11.8478 5.23463C12 5.60218 12 6.06812 12 7C12 7.93188 12 8.39782 11.8478 8.76537C11.6448 9.25542 11.2554 9.64477 10.7654 9.84776C10.3978 10 9.93188 10 9 10C8.06812 10 7.60218 10 7.23463 9.84776C6.74458 9.64477 6.35523 9.25542 6.15224 8.76537C6 8.39782 6 7.93188 6 7Z" stroke="currentColor" strokeWidth=".5" />
+                <path d="M12 17C12 16.0681 12 15.6022 12.1522 15.2346C12.3552 14.7446 12.7446 14.3552 13.2346 14.1522C13.6022 14 14.0681 14 15 14C15.9319 14 16.3978 14 16.7654 14.1522C17.2554 14.3552 17.6448 14.7446 17.8478 15.2346C18 15.6022 18 16.0681 18 17C18 17.9319 18 18.3978 17.8478 18.7654C17.6448 19.2554 17.2554 19.6448 16.7654 19.8478C16.3978 20 15.9319 20 15 20C14.0681 20 13.6022 20 13.2346 19.8478C12.7446 19.6448 12.3552 19.2554 12.1522 18.7654C12 18.3978 12 17.9319 12 17Z" stroke="currentColor" strokeWidth=".5" />
+              </svg>}
             </motion.div>
           </AnimatePresence>
         </button>
+        <span onClick={toggleSidebar} className={styles.filterText}>Filter</span>
       </div>
+
+
       <div className={`${styles.container} ${isSidebarOpen ? styles.open : ''}`}>
         <div className={styles.sidebar}>
           <div className={styles.listContainer}>
@@ -66,7 +82,7 @@ export default function SideNavbar() {
                   onClick={() => handleRadioChange('inStock', 'availability')} readOnly />
                 <span className={styles.checkmark}></span>
                 <h1 className={styles.h1Label}>In Stock</h1>
-                (<h3 className={styles.inparanthases}>16</h3>)
+                <h3 className={styles.inparanthases}>(16)</h3>
               </label>
               <label className={styles.sidebarLabelContainer}>
                 <input type="radio" name="availability" checked={selected === 'outOfStock'}

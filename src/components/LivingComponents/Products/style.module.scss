@@ -10,6 +10,10 @@
   padding: 2rem;
 }
 
+
+
+
+
 .productCard {
   display: flex;
   flex-direction: column;
@@ -49,10 +53,13 @@
   color: black;
   background-color: transparent;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
+
 .title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 0;
   color: #333;
   letter-spacing: .15em;
@@ -72,9 +79,16 @@
   font-weight: 100;
   display: none;
 }
+.PriceRange{
+  display: flex;
+  justify-content: center; /* Centers horizontally within the container */
+  align-items: center; /* Centers vertically within the container (if needed) */
+  gap: 0.5rem;
 
+}
 .price {
-  font-size: 0.95rem;
+  margin: 0;
+  font-size: 1rem;
   color: #333;
   letter-spacing: .15em;
   font-family: Cormorant, serif;
@@ -101,4 +115,104 @@
   .price {
     font-size: 0.8rem;
   }
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+}
+
+.hyperPoint {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: transparent; /* Make the center transparent */
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  border: 1px solid white; /* Outer circle border */
+  box-shadow: 0 0 0 1px transparent, /* Create transparent gaps */
+              0 0 0 1px white,       /* Outer visible part of the "target" */
+              0 0 0 1px transparent; /* Transparent space around the outer border */
+  
+  transition: transform 0.3s ease-in-out; /* Smooth spin animation */
+
+
+  /* Add a pseudo-element for the inner circle */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: white; /* Inner circle */
+    transform: translate(-50%, -50%);
+  }
+}
+
+.tooltip {
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #000; // Dark border for the comic effect
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999999;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.tooltipImage {
+  width: 75px; // Adjust size as needed
+  height: 75px;
+  flex-shrink: 0;
+}
+
+.tooltipContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.productName {
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+  letter-spacing: .15em;
+  font-family: Cormorant, serif;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.productPrice {
+  font-size: 12px;
+  margin: 5px 0 0;
+  color: #333;
+  letter-spacing: .15em;
+  font-family: Cormorant, serif;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+// Adding the chat bubble arrow effect
+.tooltip::after {
+  content: '';
+  position: absolute;
+  bottom: 100%; /* Position it above the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent white transparent; /* Arrow pointing down */
 }

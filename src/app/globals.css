@@ -6,15 +6,16 @@
 
 body{
     margin: 0px;
-    overflow: auto;
+    /*overflow: auto;*/
+    overflow-x: hidden;
     cursor: auto;
     background-color: #f3f2ec;
 }
 
 ::-webkit-scrollbar{
-    background-color: hsl(0, 0%, 100%);
+    background-color: transparent;
     display: none; /* change to block */
-    width: 8px;
+    width: 2px;
 }
 
   

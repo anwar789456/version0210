@@ -5,13 +5,12 @@
     width: calc(100vw - 310px);
     position: relative;
     margin-left: 310px;
-    padding-top: 10vh;
+    padding-top: 3rem;
     background-color: #f3f2ec;
     .background_container{
         background-color: #f3f2ec;
         width: 100%;
-    }
-    
+    } 
 }
 
 @media (max-width: 1090px){
@@ -20,3 +19,8 @@
         margin-left: 0;
     }
 }
+@media (max-width: 1091px) {
+    .container {
+        padding-top: 7rem;
+    }
+  }

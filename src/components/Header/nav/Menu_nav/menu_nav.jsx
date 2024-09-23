@@ -11,11 +11,13 @@ const links = [
     href: "/Shop",
     src: "Barbara.png",
     subLinks: [
-      { title: "Canapés", href: "/shop" },
-      { title: "Poufs & Fauteuils", href: "/shop" },
-      { title: "Tables basses", href: "/Shop" },
-      { title: "Meubles TV", href: "/Shop" },
-      { title: "Tables d’appoints", href: "/Shop" },
+      { title: "Canapés de coin", href: "/Shop", src: "Rina.png", },
+      { title: "Canapés", href: "/Shop", src: "Barbara.png", },
+      { title: "Poufs & Fauteuils", href: "/Shop", src: "Vladimir.png", },
+      { title: "Tables basses", href: "/Shop", src: "Barbara.png", },
+      { title: "Meubles TV", href: "/Shop", src: "Rina.png" },
+      { title: "Tables d’appoints", href: "/Shop", src: "Vladimir.png", },
+
     ]
   },
   {
@@ -23,11 +25,11 @@ const links = [
     href: "/Shop",
     src: "Rina.png",
     subLinks: [
-      { title: "Tables à manger", href: "/Shop" },
-      { title: "Chaises", href: "/Shop" },
-      { title: "Buffets", href: "/Shop" },
-      { title: "Vaisseliers", href: "/Shop" },
-      { title: "Bars à Cocktail", href: "/Shop" }
+      { title: "Tables à manger", href: "/Shop", src: "Barbara.png", },
+      { title: "Chaises", href: "/Shop", src: "Vladimir.png", },
+      { title: "Buffets", href: "/Shop", src: "Barbara.png", },
+      { title: "Vaisseliers", href: "/Shop", src: "Barbara.png", },
+      { title: "Bars à Cocktail", href: "/Shop", src: "Vladimir.png", },
     ]
   },
   {
@@ -35,10 +37,11 @@ const links = [
     href: "/Shop",
     src: "Vladimir.png",
     subLinks: [
-      { title: "Tables de nuit", href: "/Shop" },
-      { title: "Commodes", href: "/Shop" },
-      { title: "Coiffeuses", href: "/Shop" },
-      { title: "Armoires & Dressings", href: "/Shop" },
+      { title: "Lits", href: "/Shop", src: "Barbara.png", },
+      { title: "Tables de nuit", href: "/Shop", src: "Barbara.png", },
+      { title: "Commodes", href: "/Shop", src: "Vladimir.png", },
+      { title: "Coiffeuses", href: "/Shop", src: "Barbara.png", },
+      { title: "Armoires & Dressings", href: "/Shop", src: "Barbara.png", },
     ]
   },
   {
@@ -46,11 +49,11 @@ const links = [
     href: "/Shop",
     src: "Ulysse.png",
     subLinks: [
-      { title: "Linge de lit", href: "/Shop" },
-      { title: "Plaids & Couvertures", href: "/Shop" },
-      { title: "Coussins", href: "/Shop" },
-      { title: "Rideaux, voilages", href: "/Shop" },
-      { title: "Tapis", href: "/Shop" },
+      { title: "Linge de lit", href: "/Shop", src: "Barbara.png", },
+      { title: "Plaids & Couvertures", href: "/Shop", src: "Vladimir.png", },
+      { title: "Coussins", href: "/Shop", src: "Barbara.png", },
+      { title: "Rideaux, voilages", href: "/Shop", src: "Barbara.png", },
+      { title: "Tapis", href: "/Shop", src: "Barbara.png", },
     ]
   },
   {
@@ -58,10 +61,10 @@ const links = [
     href: "/Shop",
     src: "René.png",
     subLinks: [
-      { title: "Assiettes & bols", href: "/Shop" },
-      { title: "Verres & carafes", href: "/Shop" },
-      { title: "Ustensils & Couverts", href: "/Shop" },
-      { title: "Plats de service", href: "/Shop" },
+      { title: "Assiettes & bols", href: "/Shop", src: "Vladimir.png", },
+      { title: "Verres & carafes", href: "/Shop", src: "Barbara.png", },
+      { title: "Ustensils & Couverts", href: "/Shop", src: "Barbara.png", },
+      { title: "Plats de service", href: "/Shop", src: "Barbara.png", },
 
     ]
   },
@@ -70,52 +73,50 @@ const links = [
     href: "/Shop",
     src: "Ulysse.png",
     subLinks: [
-      { title: "Statues & Sculptures", href: "/Shop" },
-      { title: "Objets décoratifs", href: "/Shop" },
-      { title: "Tableaux", href: "/Shop" },
-      { title: "Miroirs", href: "/Shop" },
-      { title: "Végétaux et fleurs", href: "/Shop" },
+      { title: "Statues & Sculptures", href: "/Shop", src: "Barbara.png", },
+      { title: "Objets décoratifs", href: "/Shop", src: "Vladimir.png", },
+      { title: "Tableaux", href: "/Shop", src: "Ulysse.png", },
+      { title: "Miroirs", href: "/Shop", src: "Barbara.png", },
+      { title: "Végétaux et fleurs", href: "/Shop", src: "Barbara.png", },
     ]
   },
   {
     title: "Produit artisanals",
-    href: "/Bathroom",
+    href: "/Shop",
     src: "Ulysse.png",
     subLinks: [
-      { title: "Bois d’olivier", href: "/" },
-      { title: "Fibre Naturelle", href: "/" },
-      { title: "Potterie", href: "/" },
-      { title: "Toile de jute", href: "/" },
-      { title: "Fouta", href: "/" },
+      { title: "Bois d’olivier", href: "/Shop", src: "Barbara.png", },
+      { title: "Fibre Naturelle", href: "/Shop", src: "Vladimir.png", },
+      { title: "Potterie", href: "/Shop", src: "Barbara.png", },
+      { title: "Toile de jute", href: "/Shop", src: "Ulysse.png", },
+      { title: "Fouta", href: "/Shop", src: "Barbara.png", },
     ]
   },
-
   {
     title: "Éclairage",
-    href: "/Bathroom",
+    href: "/Shop",
     src: "Ulysse.png",
     subLinks: [
-      { title: "Lampadaires", href: "/" },
-      { title: "Abat Jour", href: "/" },
-      { title: "Lustres", href: "/" },
+      { title: "Lampadaires", href: "/Shop", src: "Vladimir.png", },
+      { title: "Abat Jour", href: "/Shop", src: "Ulysse.png", },
+      { title: "Lustres", href: "/Shop", src: "Barbara.png", },
     ]
   },
-
   {
     title: "Rangements",
-    href: "/Bathroom",
+    href: "/Shop",
     src: "Ulysse.png",
     subLinks: [
-      { title: "Étagères, bibliothèques", href: "/" },
-      { title: "Boîtes de rangement", href: "/" },
-      { title: "Porte-manteaux", href: "/" },
-      { title: "Porte-chaussures", href: "/" },
-      { title: "Paniers, coffres", href: "/" },
+      { title: "Étagères & bibliothèques", href: "/Shop", src: "Barbara.png", },
+      { title: "Boîtes de rangement", href: "/Shop", src: "Barbara.png", },
+      { title: "Porte-manteaux", href: "/Shop", src: "Vladimir.png", },
+      { title: "Porte-chaussures", href: "/Shop", src: "Ulysse.png", },
+      { title: "Paniers & coffres", href: "/Shop", src: "Barbara.png", },
     ]
   },
 ];
 export default function Index({ handleLinkClick }) {
-  const [selectedLink, setSelectedLink] = useState({isActive: false, index: 0});
+  const [selectedLink, setSelectedLink] = useState({ isActive: false, index: null, subIndex: null, isSublink: false });
   return (
     <motion.div variants={height} initial="initial" animate="enter" exit="exit" 
                 className={styles.nav}>
@@ -125,9 +126,17 @@ export default function Index({ handleLinkClick }) {
           setSelectedLink={setSelectedLink} handleLinkClick={handleLinkClick} />
         </div>
         <div className={`${styles.imageContainer} ${selectedLink.isActive ? styles.glowing : ''}`}>
-          <Image src={links[selectedLink.index].src} 
-                 alt="imageHere" isActive={selectedLink.isActive}/>
+          <Image
+            src={
+              selectedLink.isSublink
+                ? links[selectedLink.index]?.subLinks[selectedLink.subIndex]?.src // Optional chaining to prevent errors
+                : links[selectedLink.index]?.src // Optional chaining to prevent errors
+            }
+            alt="imageHere"
+            isActive={selectedLink.isActive}
+          />
         </div>
+
       </div>
     </motion.div>
   )

@@ -9,10 +9,11 @@
 .container {
   position: fixed;
   z-index: 222;
-  height: 100vh;
+  height: calc(100vh - 4rem);
   width: 310px;
   left: 0;
   top: 0;
+  border-right: 1px solid #a5a5a3;
   background-color: #f3f2ec;
   transform: translateX(-100%);
   transition: transform 0.7s ease-in-out;
@@ -21,11 +22,10 @@
   transform: translateX(0);
 }
 .sidebar {
-  border-right: 1px solid #a5a5a3;
-  margin-top: 4rem;
-  padding: 10px;
+  padding: 50px 0;
   width: 100%;
   height: 100%;
+
   .listContainer {
     margin-left: 1rem;
     margin-top: 1rem;
@@ -35,7 +35,7 @@
       .h1 {
         padding-top: 1rem;
         color: #303030;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         font-weight: 500;
         text-transform: uppercase;
       }
@@ -47,13 +47,13 @@
     width: fit-content;
     padding: 0rem;
     margin-top: .3rem;
-    cursor: crosshair;
+    cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
     .h1Label {
-      font-size: 1rem;
+      font-size: 1.1rem;
       padding-left: 2rem;
     }
   }
@@ -105,28 +105,52 @@
     margin-top: .5rem;
   }
 }
-.navbar {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
+
 .toggleButton {
-  position: fixed;
-  z-index: 55551;
-  height: 40px;
-  top: 10px;
-  right: 10px;
   border: none;
-  font-size: 1rem;
   cursor: pointer;
   color: #303030;
 }
+
 .toggleButton .icon{
-  border-radius: 50%;
-  padding: 10px;  
   font-size: 2.2rem;
-  box-shadow: 0 0 15px 0.1px rgba($color: #303030, $alpha: 0.4);
 }
+
+.filterBar {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  width: 100vw;
+  height: 4rem;
+  background-color: #f3f2ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #a5a5a3;
+  z-index: 55;
+}
+
+.filterBar .toggleButton {
+  height: 30px;
+  width: 30px;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.filterText {
+  cursor: pointer;
+  font-family: Cormorant, serif;
+  font-size: 19px;
+  font-weight: 100;
+  color: rgba($color: #303030, $alpha: 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+
 @media (min-width: 1091px) {
   .container {
     transform: translateX(0);
@@ -134,4 +158,18 @@
   .navbar {
     display: none;
   }
+  .filterBar{
+    display: none;
+  }
 }
+
+@media (max-width: 1091px) {
+  .container {
+    top: 8rem;
+  }
+  .sidebar {
+    padding: 0;
+  }
+}
+
+

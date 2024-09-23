@@ -1,0 +1,184 @@
+.searchBar {
+    position: fixed;
+    top: 4rem;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+    background-color: #f3f2ec;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 991;
+}
+.searchContainer {
+  position: relative;
+}
+.animatedLine {
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: rgba($color: #303030, $alpha: 0.8);
+  transition: width 0.4s ease, left 0.4s ease;
+}
+.searchInput:focus + .animatedLine {
+  width: 100%;
+  left: 0;
+}
+.searchContent {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.searchInput {
+    width: 95vw;
+    height: 60px;
+    padding: 5px;
+    background: none;
+    outline: none;
+    border: none;
+    color: rgba($color: #303030, $alpha: 1);
+    font-family: Cormorant, serif;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 15px;
+}
+.closeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #000;
+}
+  /* Basic styling for the placeholder */
+.searchInput::placeholder {
+    color: rgba($color: #303030, $alpha: 0.7);
+    font-family: Cormorant, serif;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 15px;
+}
+  
+  /* Placeholder styling for WebKit browsers (Chrome, Safari, Opera) */
+.searchInput::-webkit-input-placeholder {
+    color: rgba($color: #303030, $alpha: 0.7);
+    font-family: Cormorant, serif;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 15px;
+}
+  
+  /* Placeholder styling for Firefox */
+.searchInput::-moz-placeholder {
+    color: rgba($color: #303030, $alpha: 0.7);
+    font-family: Cormorant, serif;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 22px;
+}
+  
+  /* Placeholder styling for Internet Explorer 10+ */
+.searchInput:-ms-input-placeholder {
+    color: rgba($color: #303030, $alpha: 0.7);
+    font-family: Cormorant, serif;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 22px;
+}
+  
+  /* Placeholder styling for Microsoft Edge */
+.searchInput::-ms-input-placeholder {
+    color: rgba($color: #303030, $alpha: 0.7);
+    font-family: Cormorant, serif;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 22px;
+}
+
+.searchResults {
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100vw;
+    height: calc(100vh - 124px);
+    background-color: #eeeeed;
+    overflow-y: auto;
+    z-index: 9;
+    padding: 10px;
+}
+  
+.foundProducts {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  gap: 16px; /* Optional: Adds spacing between items */
+}
+
+.productItem {
+  width: 350px;
+  box-sizing: border-box; /* Includes padding and border in the width calculation */
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.noProductsFound {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+}
+
+.noProductsFound p{
+    color: rgba($color: #303030, $alpha: 0.7);
+    font-family: Cormorant, serif;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 22px;
+}
+
+@media (max-width: 1200px) {
+  .searchInput {
+      width: 90vw;
+  }
+}
+
+@media (max-width: 690px) {
+  .searchInput {
+      width: 85vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .searchInput {
+      width: 80vw;
+  }
+}

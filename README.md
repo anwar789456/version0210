@@ -36,6 +36,87 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 
-/*
-  @headlessui/react @radix-ui/react-icons @radix-ui/react-slider axios bootstrap class-variance-authority clsx cors dotenv eslint eslint-config-next express framer-motion gsap locomotive-scroll mongodb mongoose nodemon react-bootstrap react-icons react-responsive-carousel react-slick sass slick-carousel tailwind-merge tailwindcss-animate tw-elements
-*/
+
+
+
+
+
+
+Produits = [
+    {
+        id: "",
+
+        Type prod: [""],
+
+        nom: "",
+        
+        description: "",
+
+        quantité: "",
+        
+        liste des images: [
+            {
+                img1,
+                HyperPoints: [{produit, x, y}]
+            }
+        ],
+        
+        Price Range: ["min","max"],
+        
+        Dimensions: [
+            {
+                Longueur: "",
+                Largeur: "",
+                Hauteur: "",
+                profondeur assise: "",
+            }
+        ],
+
+        Declinaison: [""],
+        
+        enStock: ""; oui ou non (depandant of quantity)
+        
+        display : "", oui ou non
+
+        surCommande: "oui",
+
+        options: [{
+            option:{
+                nom : "T2",
+                additional price : "40"
+            },
+            option:{
+                nom : "T3",
+                additional price : "80"
+            },
+            option:{
+                nom : "T4",
+                additional price : "120"
+            },
+            option:{
+                nom : "T5",
+                additional price : "160"
+            },
+            option:{
+                nom : "T6",
+                additional price : "200"
+            },
+            option:{
+                nom : "T7",
+                additional price : "240"
+            },
+            option:{
+                nom : "T8",
+                additional price : "280"
+            },
+            option:{
+                nom : "T9",
+                additional price : "230"
+            },
+        }]
+    }
+]
+
+
+
+

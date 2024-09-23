@@ -1,0 +1,36 @@
+.title{
+  font-size: 25px;
+  color: rgba($color: #303030, $alpha: 0.7);
+  letter-spacing: .17em;
+  word-spacing: .2em;
+  font-family: Cormorant, serif;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.titleDiv{
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.linkContainer{
+  transition: scale .2s ease-in-out;
+}
+
+.linkContainer:hover{
+  scale: 1.02;
+}
+
+.linkContainer:active{
+  scale: 0.99;
+}
+
+
+.recommendedProductsContainer {
+  padding: 20px; 
+  margin-top: 2rem;
+  margin-bottom: 9rem;
+  border-top: 1px solid rgba($color: #303030, $alpha: 0.2);
+}
+  

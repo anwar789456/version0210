@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const PORT = process.env.PORT || 3001;
+const PORT = 5000;
 // Middleware to parse JSON bodies
 app.use(express.json());
 app.use(cors());
@@ -28,10 +28,8 @@ mongoose.connect(mongoURI, {
 // Sample route to demonstrate fetching data from MongoDB
 app.get('/get-products', async (req, res) => {
   try {
-    console.log('Querying samet-data.produits collection');
     const db = mongoose.connection.db;
     const productsData = await db.collection("produits").find({}).toArray();
-    console.log('Products data:', productsData);
     res.json(productsData);
   } catch (error) {
     console.error('Error fetching data:', error);

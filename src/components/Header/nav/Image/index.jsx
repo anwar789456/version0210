@@ -9,9 +9,10 @@ export default function Index({src, isActive}) {
     <motion.div variants={opacity} initial="initial" animate={isActive ? "open" : "closed"} 
     className={styles.imageContainer}>
         <Image 
-        src={`/images/${src}`}
-        fill={true}
-        alt="image"
+          src={`/images/${src}`}
+          fill={true}
+          alt="image"
+          style={{ objectFit: 'cover' }}
         />
     </motion.div>
   )

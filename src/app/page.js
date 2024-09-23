@@ -7,11 +7,9 @@ import Landing from '../components/Landing';
 import Categories from '../components/Categories';
 import Footer from '../components/NewFooter/Footer'
 import Header from '../components/Header';
-
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [showScrollbar, setShowScrollbar] = useState(false);
-
   useEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default;
@@ -21,10 +19,9 @@ export default function Home() {
         document.body.style.cursor = 'default';
         setShowScrollbar(true);
         window.scrollTo(0, 0);
-      }, 2100);
+      }, 1000);
     })();
   }, []);
-
   return (
     <main className={styles.main}>
       <AnimatePresence mode="wait">
@@ -34,6 +31,6 @@ export default function Home() {
       <Landing />
       <Categories />
       <Footer />
-    </main>
+    </main >
   );
 }
