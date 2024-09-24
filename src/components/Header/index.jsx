@@ -12,7 +12,7 @@ import Magnetic from '../../common/Magnetic';
 import Image from 'next/image';
 import Link from 'next/link';
 import CartContainer from '../Cart';
-import { fetchProducts } from '@/api/fetchProducts';
+import { fetchProducts } from '../../api/fetchProducts';
 const menuPhoneNavjs = {
     open: {width: "95vw",height: "95vh", top: "-5px",left: "-5px", backgroundColor: "#ffffff",
       transition: { duration: 0.75, type: "tween", ease: [0.76, 0, 0.24, 1] }

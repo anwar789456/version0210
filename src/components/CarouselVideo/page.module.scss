@@ -1,7 +1,7 @@
 .video_container{
     width: 100vw;
     height: 100vh;
-    
+    position: relative;
 }
 .blacksreen{
     content: "";
@@ -15,7 +15,7 @@
     
 }
 .video{
-    position: absolute;
+    //position: absolute;
     z-index: -1;
     height: 100%;
     width: 100%;

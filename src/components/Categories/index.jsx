@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import styles from './style.module.scss';
-import Rounded from '../../common/RoundedButton';
+
 import Magnetic from '../../common/Magnetic';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -42,11 +42,11 @@ export default function Categories() {
             <Link href='/Shop'>
               <div className={styles.title_container}>
                 <h1 className={styles.title_h1_text}>{category.title}</h1>
-                <Rounded className={styles.button}>
+                <div className={styles.button}>
                   <Magnetic>
                     <p>View More</p>
                   </Magnetic>
-                </Rounded>
+                </div>
               </div>
             </Link>
           </div>

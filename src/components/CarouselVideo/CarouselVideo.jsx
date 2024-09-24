@@ -5,7 +5,8 @@ export default function CarouselVideo() {
   return (
     <>
       <div className={styles.video_container}>
-        <div className={styles.blacksreen}></div>
+        {<div className={styles.blacksreen}></div>
+        }
         <video
             src="/videos/video4.mov"
             autoPlay
